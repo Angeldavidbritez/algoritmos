@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="butons">
+        <input type="button" onclick="genero(12)" value="12">
+        <input type="button" onclick="genero()" value="">
+        <input type="button" onclick="genero()" value="">
+        <input type="button" onclick="genero()" value="">
+        <input type="button" onclick="genero()" value="">
+    </div>
+    <script>
+        function genero(gen){
+        $(document).ready(function () {
+            str = "<div class='row'>";
+                $.ajax({
+                    url: 'https://api.themoviedb.org/3/discover/movie?api_key=289e1cd788cc62cc91fb158573e14c99&with_genres='+gen,
+                    type: 'GET',
+                dataType: 'json',
+                async: false,
+                success: function (data) {
+                    data.results.forEach(data1 => {
+                        str += "<div class='col col-3'>"
+                        str += "<h1>" + data1['original_title'] + "</h1>";
+                        str += "<img src = 'https://image.tmdb.org/t/p/w500" + data1['backdrop_path']+ "'>"; 
+                    });
+
+                }
+            })
+            str += "</div>";
+            $("#content").html(str);
+        })  }
+    </script>
+    <div id="content">
+    </div>
+    < img <
+</body>
+
+</html>

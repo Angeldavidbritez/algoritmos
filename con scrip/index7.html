@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+
+    <script>
+        // Con este array
+        // 1. Agregar dos autos al final hecho
+        // 2. Agregar dos autos antes de Volvo
+        // 3. Eliminar uno x
+        // 4. Eliminar el primero
+        // 5. Eliminar el ultimo
+        // 6. Insertar antes del primero  hecho
+        // 7. Insertar antes del ultimo
+        // 8. Insertar despues de x
+        const cars = ["Saab", "Volvo", "BMW", "FIAT"];
+        cars.push("ferrari", "Renault")
+        document.getElementById("demo1").innerHTML = cars
+
+        cars.splice(1, 0, "hola", "chau")
+        document.getElementById("demo2").innerHTML = cars
+
+        delete cars[0]
+        document.getElementById("demo3").innerHTML = cars
+
+        cars.shift()
+        document.getElementById("demo4").innerHTML = cars
+
+        cars.splice(0, 0, "cd")
+        document.getElementById("demo5").innerHTML = cars
+
+        cars.splice(8, 7, "cs")
+        document.getElementById("demo6").innerHTML = cars
+
+        cars.splice(5, 0, "no")
+        document.getElementById("demo7").innerHTML = cars
+    </script>
+    </script>
+</body>
+
+</html>

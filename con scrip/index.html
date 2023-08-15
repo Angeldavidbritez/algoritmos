@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página</title>
+    <link type="text/css" rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Usuario</td>
+            <td><input id="usuario" type='text' value=""><br></td>
+        </tr>
+        <tr>
+            <td>Clave</td>
+            <td><input id="clave" type='password' value=""></td>
+        </tr>
+        <tr>
+            <td><input onclick="verificar()" type="button" value="verificar"></td>
+        </tr>
+    </table>
+
+
+
+
+
+    <script>
+
+        function verificar() {
+            var a = document.getElementById("usuario").value;
+            var b = document.getElementById("clave").value;
+
+            if (a == "angel" && b == "angel") {
+                alert("Bienvenido");
+            } else {
+                alert("incorrecto");
+            }
+
+        }
+    </script>
+</body>
+
+</html>

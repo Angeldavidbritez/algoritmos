@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<style>
+    #tabla1 {
+        background-color: blue;
+        margin-bottom: 10px;
+        align-self: center;
+       }
+    #tr{
+        width: 20px;
+        height: 20px;
+        
+    }
+    #td{
+        width: 20px;
+        height: 20px;
+    }
+    td:hover{
+        background-color: rgb(97, 14, 72);
+        cursor: pointer    ;
+    }
+</style>
+
+<body>
+    <!-- <div id='sacar'> 
+        filas
+        <input id="filas" type='number' value="">
+     columnas   
+        <input id="columnas" type='number' value="">
+        <input onclick="verificar()" type='button' value="ejecutar">
+    </div> -->
+       
+        <div id="divtabla" ></div>
+
+        <script>        
+            filas = 9;
+            n = 1;
+    
+             function mostrar(fila, columna) {
+                 alert("fila: " + fila + " / columna: " + columna);
+             }
+            function pintar(fila, columna){
+                        document.getElementById("1_"+columna).style.backgroundColor="red";
+                        document.getElementById(fila+"1_").style.backgroundColor="red";
+                    }    
+    
+            tabla = "<table id='tabla1' border='1'>";
+            for(f=1; f<=filas; f++)  {
+                tabla += "<tr>";
+                for(c=1; c<=9; c++)  {
+                    tabla += "<td onmouseover ='pintar("+f+","+c+")' id='" + f + "_" + c + "'><center>"+(f*c)+"</center></td>";                
+                }
+                tabla += "</tr>";
+            }        
+            tabla += "</table>";          
+            document.write(tabla);      
+
+
+        </script>
+
+        
+</body>
+
+</html>

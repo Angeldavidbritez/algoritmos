@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>valor1</td>
+            <td><input id="valor1" type='number' value=""><br></td>
+        </tr>
+        <tr>
+            <td>valor2</td>
+            <td><input id="valor2" type='number' value=""></td>
+        </tr>
+        <tr>
+            <td><input onclick="verificar()" type="button" value="sumar"></td>
+        </tr>
+    </table>
+    <script>
+        function verificar() {
+            var a = parseInt(document.getElementById("valor1").value);
+            var b = parseInt(document.getElementById("valor2").value);
+
+            alert(a+b)
+        }
+    </script>
+</body>
+
+</html>

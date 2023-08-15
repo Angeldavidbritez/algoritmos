@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    1°ejercicio
+    <input id="e1" onkeyup="alert(uno(nombre.slice(),document.getElementById('e1').value))" type="text" value="">
+    <script>
+        //vector 
+        nombre = ["Carlos", "Karina", "Luciana", "Mariana", "Dario", "Pedro"];
+
+        //Variables
+        let = document.getElementById("e1").value
+        n=1 
+
+        
+        //primer punto  
+        function uno(x, letra) {
+            bandera = false;
+            x.forEach(p_letra => {
+                n++;
+                if (p_letra[0] == letra) {
+                    bandera = true + " en la posicion " + n ;
+                    
+                } 
+            });
+            n=1;
+            return bandera;
+        };
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

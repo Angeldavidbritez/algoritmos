@@ -1,0 +1,112 @@
+<!-- 
+1 Imprimir el nombre de la tienda
+2 Consigna: Imprimir el precio de la segunda variante de la primera camisa
+3 Imprimir la cantidad de productos en la tienda
+4 Imprimir el stock de la variante "Azul" de la primera camisa
+5 Imprimir el tipo de producto y precio de cada producto en la tienda
+6 Imprimir el nombre de cada producto y sus variantes disponibles
+7 Calcular el total de stock de todas las variantes de todos los productos en la tienda
+8 Encontrar el producto con el mayor precio en la tienda -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const tienda = {
+            "nombre": "Mi Tienda",
+            "productos": [
+                {
+                    "id": 1,
+                    "tipo": "Camisa",
+                    "nombre": "Camisa",
+                    "precio": 20,
+                    "variantes": [
+                        { "color": "Rojo", "stock": 10 },
+                        { "color": "Azul", "stock": 15 },
+                        { "color": "Verde", "stock": 5 }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "tipo": "Pantalón",
+                    "nombre": "Pantalón",
+                    "precio": 30,
+                    "variantes": [
+                        { "color": "Negro", "stock": 20 },
+                        { "color": "Gris", "stock": 10 }
+                    ]
+                }
+            ]
+        };
+
+
+        console.log("1 Imprimir el nombre de la tienda");
+        console.log(tienda.nombre);
+        console.log("");
+
+        console.log("2 Imprimir el precio de la segunda variante de la primera camisa");
+        console.log(tienda.productos[0].precio);
+        console.log("");
+
+        console.log("3 Imprimir la cantidad de productos en la tienda");
+        tienda.productos.forEach(producto => {
+            console.log(producto.tipo)
+        });
+        console.log("");
+
+        console.log("4 Imprimir el stock de la variante Azul de la primera camisa");
+        console.log(tienda.productos[0].variantes[1].stock)
+        console.log("");
+
+        console.log("5 Imprimir el tipo de producto y precio de cada producto en la tienda");
+        tienda.productos.forEach(producto2 => {
+            console.log("el tipo es: " + producto2.tipo);
+            console.log("y el precio es " + producto2.precio)
+        });
+        console.log("");
+
+        console.log("6 Imprimir el nombre de cada producto y sus variantes disponibles");
+        tienda.productos.forEach(product3 => {
+            console.log("el nombre es: " + product3.nombre);
+            console.log("y sus bariantes son ");
+            product3.variantes.forEach(variantes => {
+                console.log("color: " + variantes.color);
+                console.log("stock: " + variantes.stock);
+            });
+        });
+        console.log("");
+        console.log("7 Calcular el total de stock de todas las variantes de todos los productos en la tienda");
+        tienda.productos.forEach(product4 => {
+            total = 0
+            console.log(product4.tipo)
+            product4.variantes.forEach(variantes => {
+                total += variantes.stock
+
+            });
+            console.log("stock: " + total);
+        });
+        console.log("");
+        console.log("8 Encontrar el producto con el mayor precio en la tienda -");
+        tienda.productos.forEach(product5 => {
+            precio = 0;
+
+            if (precio < product5.precio) {
+                preciomayor = product5.precio;
+                nombre=product5.tipo
+
+            }
+
+        });
+        console.log(nombre+" precio mayor :"+preciomayor)
+    </script>
+
+</body>
+
+</html>

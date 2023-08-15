@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <table>
+        <tr>
+            <td>2°valor</td>
+            <td><input id="v1" type='number' value=""><br></td>
+        </tr>
+        
+        <tr>
+            <td>1°valor</td>
+            <td><input id="v2" type='number' value=""></td>
+        </tr>
+        
+        <tr>
+            <td>3°valor</td>
+            <td><input id="v3" type='number' value=""></td>
+        </tr>
+
+        <tr>
+            <td><input onclick="sumar()" type="button" value="contar"></td>
+        </tr>
+    </table>
+
+    <script>
+      function sumar(v1,v2,v3) {
+        return v1+v2+v3
+      } 
+      alert(
+        sumar
+            (
+            parseInt(document.getElementById("v1").value);
+            parseInt(document.getElementById("v2").value);
+            parseInt(document.getElementById("v3").value);
+            )
+    )
+    </script>
+  
+</body >
+</html >

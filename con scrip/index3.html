@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>valor inicial</td>
+            <td><input id="v1" type='number' value=""><br></td>
+        </tr>
+        <tr>
+            <td>valor final</td>
+            <td><input id="v2" type='number' value=""></td>
+        </tr>
+        <tr>
+            <td><input onclick="verificar()" type="button" value="contar"></td>
+        </tr>
+    </table>
+    <script>
+        function verificar() {
+            var i = parseInt(document.getElementById("v1").value);
+            var f = parseInt(document.getElementById("v2").value);
+            var ia = i
+            for (; i <= f; i++) {
+                for(x=0;x<f;x++){
+                    document.write("&  nbsp")
+                }
+                document.write(i + "<br>");
+                document.write("x"+1);
+            }
+           i=f-1;
+                for (; i >= ia; i--) {
+                    document.write(i + "<br>");
+                }
+            document.write('termino el for');
+
+        }
+
+
+    </script>
+</body>
+
+</html>
